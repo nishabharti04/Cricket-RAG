@@ -1,25 +1,32 @@
-🏏 Cricket RAG Assistant
+# 🏏 Cricket RAG Assistant
 
-Project Overview
+An LLM-powered Cricket Question Answering system that combines **Retrieval-Augmented Generation (RAG)** with a cricket knowledge base to provide grounded answers to cricket-related questions.
 
-Architecture
-Streamlit → FastAPI → RAG → ChromaDB → Ollama/Llama 3.2
+The application uses **FastAPI** for the backend API, **ChromaDB** for vector retrieval, **Hugging Face embeddings** for semantic search, **Ollama with Llama 3.2:1b** for language generation, and **Streamlit** for the user interface. The complete application can also be deployed using **Docker and Docker Compose**.
 
-Features
+---
 
-Tech Stack
+## 📌 Project Overview
 
-Project Structure
+Large Language Models can sometimes generate incorrect or hallucinated answers when asked factual questions.
 
-How to Run Locally
+This project addresses that problem by retrieving relevant information from a curated cricket knowledge base before generating an answer.
 
-How to Run with Docker
+### Workflow
 
-Example Questions
-
-Evaluation
-30/30 on the current curated test set
-
-Limitations
-
-Screenshots
+```text
+User
+  ↓
+Streamlit UI
+  ↓
+FastAPI API
+  ↓
+Cricket RAG Engine
+  ↓
+ChromaDB Vector Search
+  ↓
+Relevant Cricket Documents
+  ↓
+Llama 3.2:1b / Hybrid Extraction
+  ↓
+Grounded Answer
