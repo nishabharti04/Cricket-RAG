@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-chroma
+langchain-text-splitters
+langchain-huggingface
+langchain-ollama
+chromadb
+sentence-transformers
+python-dotenv
+pydantic
+pytest
+httpx
+streamlit
+requests
